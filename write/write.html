@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document.write() 사용</title>
+</head>
+<body></body>
+<script>
+    // document.write("<h1>Welcome!</h1>");
+    // document.write("<span>" + (1 + 1) +"</span>")
+
+    // ES6 : 자바 스크립트의 6번째 표준안
+    // 템플릿 리터럴 : 문자열 표기법으로 따옴표 대신에 백틱을 사용함
+    document.write(`<h1>Welcome!</h1>`);
+    // ${}를 사용하면 이 안에서 연산을 진행해줌.
+    // 그리고 다 +로 연결해줄 필요없이 ``을 사용하면 됨.
+    document.write(`<span>${1 + 10}</span>`);
+</script>
+</html>

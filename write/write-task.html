@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document.write() 활용</title>
+</head>
+<body>
+    <!-- 
+        document.write() 활용
+        -----------------------------(hr 태그 : 수평선의 약자로 말 그대로 가로선을 그어주는 태그임)
+        Welcome!
+
+        2 + 5는
+        7입니다.
+    -->
+</body>
+<script>
+    // document.write를 여러번 쓰고 싶을 때는 with로 묶어서 사용하기
+     with(document){
+        write(`<h3>document.write() 활용</h3>`);
+        write(`<hr>`);
+        write(`<h4>Welcome!</h4>`);
+        write(`<br>`);
+        write(`2+5는`);
+        write(`<br>`);
+        write(`<span>${2+5}입니다.</span>`);
+     }
+
+</script>
+</html>
