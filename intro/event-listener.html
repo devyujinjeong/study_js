@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 리스너</title>
+  </head>
+  <body>
+    <h3>마우스를 올려보세요</h3>
+    <hr />
+    <!-- 자바 스크립트에서는 태그 하나를 객체로 볼 줄 알아야 함. -->
+    <!-- 그래서 분석하면, img라는 객체가 있고,
+    이미지라는 객체 안에 필드가 src, width, onmouseover, onmouseout 이렇게 4개가 존재하는 것으로 보기  -->
+    
+    <!-- 이벤트 리스너의 예시 : onmouseover, onmouseout
+    onmouseover은 마우스를 올렸을 때, 뒤의 문법을 실행하라는 의미(icon2를 보여주기)
+    onmouseout은 마우스를 땠을 때, 뒤의 문법을 실행하라는 의미(icon1을 보여주기) -->
+    <img
+      src="images/icon1.png"
+      width="200px"
+      onmouseover="this.src='images/icon2.png'" 
+      onmouseout="this.src='images/icon1.png'"
+    />
+  </body>
+</html>

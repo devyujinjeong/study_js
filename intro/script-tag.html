@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>script 태그</title>
+  </head>
+  <body>
+    <h3>마우스를 올려보세요</h3>
+    <hr />
+    <!-- src 속성은 재생할 미디어 파일의 URL을 명시 -->
+    <img
+      src="images/icon1.png"
+      width="200px"
+      onmouseover="changeImage('over',this)"
+      onmouseout="changeImage('out',this)"
+    />
+  </body>
+  <script>
+    function changeImage(event, object) {
+      object.src = 'images/' + (event == 'over' ? 'icon2.png' : 'icon1.png');
+    }
+  </script>
+</html>
