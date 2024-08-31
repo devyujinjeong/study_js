@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 실습</title>
+</head>
+<body>
+    <form action = "">
+        <input type="text" name = "memberId">
+        <input type="password" name = "memberPassword">
+    </form>
+</body>
+<script>
+    // 비밀번호를 보이게 수정하기
+    // type이 password면 비밀번호가 보이지 않음. 
+    // 그래서 type을 text로 변경해주면, 비밀번호가 보여지게 됨.
+    // input 태그에서 name이 memberPassword인 것을 가져오기. 그리고 type을 변경해주기
+    document.querySelector("input[name=memberPassword]").type="text";
+
+</script>
+</html>

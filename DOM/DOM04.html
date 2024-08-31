@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM4 - CSS 선택자를 이용한 선택</title>
+    <style>
+        .food {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS 선택자를 이용한 선택</h1>
+    <p>음식 목록</p>
+    <ul>
+        <li>치킨</li>
+        <li>초밥</li>
+        <li>피자</li>
+        <li>장어</li>
+        <li>자장면</li>
+    </ul>
+</body>
+<script>
+    // 1. 노드리스트에 filter가 없기 때문에, 선언해주고 array에 있는 filter 담아주기
+    NodeList.prototype.filter = Array.prototype.filter;
+    // 2. 쿼리셀렉터를 통해서 리스트에 첫번째 가져오기 (선택자를 전달하면 됨)
+    const chicken = document.querySelector("ul li:first-child");
+    const sushi = document.querySelector("ul li:nth-child(2)");
+    // 3. list에 있는 것들 모두 가져오기
+    const menu = document.querySelectorAll("ul li");
+    menu[3].setAttribute("class", "eel food");
+
+    // 클래스 추가하기
+    chicken.classList.add("chicken");
+    sushi.classList.add("sushi", "food");
+
+    // 클래스 삭제하기
+    // sushi.classList.remove("food");
+    // sushi.classList.forEach(className => console.log(className));
+    // console.log(sushi.getAttribute("class"));
+    
+    // sushi의 클래스 값을 가져와서 food가 포함되어 있는지 검사하기 (포함되어 있으면 true, 아니면 false)
+    // console.log(sushi.getAttribute("class").includes("food"));
+    // console.log(document.querySelectorAll("ul li"));
+    // menu.filter(li => li.getAttribute("class") != null).filter(li => li.getAttribute("class").includes("food")).forEach(food => food.style.color = 'pink');
+</script>
+</html>

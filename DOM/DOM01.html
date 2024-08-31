@@ -1,0 +1,48 @@
+<!-- 
+    DOM(Document Object Model) 객체
+    HTML 태그들을 하나씩 객체화한 것.
+    HTML 페이지의 내용과 모양을 제어하기 위해 사용되는 객체이다.
+    HTML 태그 당 DOM 객체가 하나씩 생성된다.
+    HTML 태그의 포함관계에 따라 부모, 자식, 형제자매 관계로 구성된다. 이를 DOM트리라고 한다.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM1 - 클래스 이름을 이용한 선택</title>
+</head>
+<body>
+    <h1>클래스 이름을 이용한 선택</h1>
+    <ul>
+        <li class="road-bike">삼천리 자전거</li>
+        <li class="mountain-bike">자이언트</li>
+        <li class="road-bike">트랙</li>
+        <li class="mountain-bike">BMC</li>
+        <li class="mountain-bike">스페셜라이즈</li>
+    </ul>
+</body>
+<script>
+    // HTMLCollection은 프로토타입
+    // 만약에 이게 없다면, roadBikes는 array객체가 아님
+    // 여기에서 prototype은 자바로 따지면, static이라고 보면 됨
+    // forEach를 선언하고 array에 있는 forEach를 담아주기
+    HTMLCollection.prototype.forEach = Array.prototype.forEach;
+    // document에서 가져올건데, 클래스 이름으로 가져올 것임.
+    // 그리고, 클래스 이름은 여러개일 수 있으므로 elements로 적혀있는 것임.
+    // 이 코드를 통해서 가져오는 것은 끝!
+    const roadBikes = document.getElementsByClassName("road-bike");
+    // 로드바이크를 하나씩 가져온 뒤에 
+    // 로드바이크에 있는 내용에 (로드)라는 내용을 연결하고 수정함. 
+    roadBikes.forEach(roadBike => roadBike.innerText = roadBike.innerText + "(로드)");
+
+    // 산악 자전거는 글자색을 모두 초록색으로 변경
+    // 1. 클래스 이름을 통해서 mountain-bike의 요소들을 가져오기 
+    const mountainbikes = document.getElementsByClassName("mountain-bike");
+    // 2. mountain-bike를 하나씩 가져와서 색을 green으로 변경하기
+    mountainbikes.forEach(mountainbike => mountainbike.style.color='green');
+
+</script>
+</html>

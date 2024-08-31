@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM5 - 객체를 동적으로 생성, 삽입, 삭제</title>
+</head>
+<body>
+    <p>DOM 트리에 동적으로 객체를 삽입할 수 있다.</p>
+    <p>createElement("태그명"), appendChild("태그 객체"), removeChild("태그 객체")</p>
+    <p>위 3개의 메소드를 이용해서 새로운 객체를 생성, 삽입, 삭제한다.</p>
+</body>
+<script>
+    const div = document.createElement("div"); // div 객체를 하나 생성
+    div.innerText = "DIV"; 
+    document.body.appendChild(div); // 객체 삽입
+    // document.body.removeChild(div); // 객체 삭제
+    // console.log(document.body.innerHTML);
+    div.innerHTML = "<input type='checkbox' name='div' value='div'> 체크";
+    // innerText는 내용만 넣을 수 있고, innerHTML은 태그도 넣을 수 있는 것임!!    
+</script>
+</html>
