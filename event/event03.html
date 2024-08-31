@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>첨부파일 썸네일</title><style>
+        div.image {
+            width: 200px;
+            height: 200px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        div.add-image {
+            background-image: url("add.png");
+        }
+
+        div.cancel {
+            position: absolute;
+            right: 0;
+            width: 15px;
+            height: 15px;
+            background-color: #000;
+            color: #fff;
+            font-size: 5px;
+            text-align: center;
+            line-height: 15px;
+        }
+    </style>
+</head>
+<body>
+    <label for="attach">
+        <div class="image add-image"></div>
+    </label>
+    <input type="file" id="attach" style="display: none;">
+    <div class="image">
+        <div class="cancel" style="display: none";>X</div>
+    </div>
+</body>
+<script src="event03.js"></script>
+</html>

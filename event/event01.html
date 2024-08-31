@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭 이벤트</title>
+    <style>
+        p {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h3>CSS 스타일 동적 변경</h3>
+    <hr>
+    <p>클릭하세요</p>
+</body>
+<script>
+    // 1. document에서 p태그를 가져온뒤에 eventlistener를 추가하기
+    // 2. 첫번째에 event 이름을 넣고, 그 다음에 실행할 함수 넣기(콜백함수)
+    // document.querySelector("p").addEventListener("click", function(){
+    //     this.style.color = 'blue';
+    // });
+
+    // document.querySelector("p").onclick = function(){
+    //     this.style.color = 'red';
+    // }
+
+    document.querySelector("p").onclick=function(){
+        alert('클릭');
+    };
+    
+</script>
+</html>
