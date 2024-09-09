@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        월화수목금토일
+        ---------------------(hr)
+        000은 출근
+
+        사용자에게 요일을 입력받고 월~목은 출근, 다른 날은 휴일을 출력한다.
+        요일은 "월", "화", ... 형식으로 입력받는다.
+     -->
+     <h3>월화수목금토일</h3>
+     <hr>
+</body>
+<script>
+    let dayOfWeek = prompt("요일을 입력하세요");
+    let result;
+
+    switch(dayOfWeek){
+        case '월': case '화': case '수': case '목':
+            result = '출근';
+            break;
+        case '금': case '토': case '일':
+            result = '휴일';
+            break;
+    }
+
+    if(!result){
+        document.write(`<p>요일을 입력해주세요.</p>`);
+    }else{
+        document.write(`<p>${dayOfWeek}요일은 ${result}</p>`);
+    }
+</script>
+</html>

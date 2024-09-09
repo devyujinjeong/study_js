@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        pr("%", 5);
+        결과 : %%%%%
+
+        위의 결과가 나오는 함수를 선언하여 사용한다.
+        출력은 콜백함수를 사용한다.
+     -->
+</body>
+<script>
+    let string = prompt("출력하실 내용을 입력하세요.");
+    let count = prompt("출력하실 횟수를 입력하세요.");
+
+    generateText(string, count, function(text){
+        document.write(`<p>결과: ${text}</p>`);
+    });
+
+    function generateText(string, count, callback){
+        let text = ``;
+        document.write(`<p>pr("${string}", ${count})`);
+            
+        for(let i=0; i<count; i++){
+            text += string;
+        }
+        if(callback){
+            callback(text);
+        }
+    }
+
+</script>
+</html>

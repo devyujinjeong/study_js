@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>댓글</title>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0 auto;
+            font-size: 2rem;
+            width: 500px;
+        }
+
+        div.reply {
+            display: flex;
+            width: 500px;
+        }
+
+        div.reply div {
+            width: 250px;
+            text-align: center;
+        }
+
+        div.writer {
+            position: relative;
+        }
+
+        div.writer::after {
+            content: '';
+            width: 2px;
+            height: 45px;
+            background-color: gray;
+            position: absolute;
+            right: 0px;
+            top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <div class="reply">
+                <div class="writer">작성자</div>
+                <div class="content">댓글 내용</div>
+            </div>
+        </li>
+        <li>
+            <div class="reply">
+                <div class="writer">작성자</div>
+                <div class="content">댓글 내용</div>
+            </div>
+        </li>
+    </ul>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="final.js"></script>
+</html>
