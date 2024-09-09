@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body {
+  font-family: 'Gowun Dodum';
+  text-align: center
+
+}
+
+table {
+    width: 50%;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.td1{
+    background-color: #ffffa1;
+}
+
+#square-container {
+    margin: 0 auto;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+fieldset{
+    width: 20%;
+    border: 1px solid black;
+    display: flex;
+    margin: 0 auto;
+}
