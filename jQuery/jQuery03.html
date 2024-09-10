@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery3 - 서비스 이용 동의</title>
+</head>
+<body>
+    <form action="" name="termForm">
+        <div>
+            <label>
+                <input type="checkbox" name="term1" class="term">
+                서비스 이용약관 동의
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="term2" class="term">
+                광고 수신 동의
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="checkbox" name="term3" class="term">
+                개인 정보 이용약관 동의
+            </label>
+        </div>
+    </form>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script>
+    $("input[type='checkbox']").click(function(){
+        let index = $("input[type='checkbox']").index(this);
+
+        if($(this).is(":checked")){
+            console.log(`${index + 1}번째 체크됨`);
+        }
+        // console.log($(this).prop('checked'));
+    });
+</script>
+</html>

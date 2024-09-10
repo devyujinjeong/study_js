@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery1</title>
+</head>
+<body>
+    <div><input type="text" class="num" value="1"></div>
+    <div><input type="text" class="num" value="2"></div>
+    <div><input type="text" class="num" value="3"></div>
+    <div>
+        <!-- js를 이용한 부분 -->
+        <button onmouseover="change()">변경(js)</button>
+        <!-- jQuery를 이용한 부분 -->
+        <button onmouseover="$('input.num').css('color', 'red')">변경(jQuery)</button>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script>
+    function change(){
+        const inputs = document.querySelectorAll("input.num");
+        inputs.forEach(input => input.style.color = 'red');
+    }   
+</script>
+</html>

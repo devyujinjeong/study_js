@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery5 - 비밀번호 확인하기</title>
+    <style>
+        div.img {
+            cursor: pointer;
+            width: 100px;
+            height: 50px;
+            background-image: url('close.png');
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        #wrap {
+            display: flex;
+            width: 400px;
+        }
+
+        input {
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div>
+            <input type="password" name="password" placeholder="비밀번호 넣어라">
+        </div>
+        <div class="img close"></div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script>
+    const $eye = $("div.img");
+    const $input = $("input[name=password]");
+    $eye.on("click", function(){
+        // 클래스를 확인하고 해당 클래스에 close라는 이름을 가지고 있는 요소를 가져오기
+        const condition = $(this).attr('class').includes('close');
+
+        if(condition){
+            $(this).css('background-image', "url('open.png')");
+            this.classList.replace('close', 'open');
+        }else{
+            $(this).css('background-image', "url('close.png')");
+            this.classList.replace('open', 'close');
+        }
+        $input.attr('type', condition ? 'text' : 'password');
+    });
+</script>
+</html>

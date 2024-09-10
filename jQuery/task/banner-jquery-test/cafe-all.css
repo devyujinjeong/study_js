@@ -1,0 +1,116 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: inherit;
+}
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    height: 1200px;/* 삭제 */
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    background-color: #f8f8f8;
+    line-height: 1.42857143;
+    font-family: 'Noto Sans KR', 'Pretendard Variable', Pretendard, -apple-system,
+	BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+	'Apple SD Gothic Neo', 'Malgun Gothic', 'Apple Color Emoji',
+	'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block
+}
+
+ol, ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+blockquote,q {
+    quotes: none
+}
+
+blockquote:after,blockquote:before,q:after,q:before {
+    content: "";
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+a {
+    font-family: inherit;
+    text-decoration: inherit;
+    cursor: pointer
+}
+
+a,a:active,a:hover,a:visited {
+    color: inherit
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font-family: inherit
+}
+img {
+    vertical-align: middle
+}
+input,input:focus {
+    outline: none!important
+}
+input,input:focus,input[type=text],textarea {
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important
+}
+
+input[type=text],textarea {
+    resize: none;
+    outline: none
+}
+
+button, div, h1, h2, h3, h4, h5, h6, input, p, select, span, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+a:focus {
+    outline: none!important
+}
+:root {
+    --nav-height: 50px;
+}
+
+svg{
+    width: 18;
+    height: 18;
+}
+
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery2</title>
+</head>
+<body>
+    <ul class="car">
+        <li>벤츠</li>
+        <li class="audi">아우디</li>
+        <li class="target">BMW</li>
+    </ul>
+    <h3></h3>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script>
+    // closest(선택자) : 부모에서
+    // find(선택자) : 자식에서
+    // next() : 다음 요소
+    // prev() : 이전 요소
+
+    // const ul = $("ul");
+    // const li = $("li.target");
+    // const h3 = $("h3");
+
+    // h3.text(ul.find('.target').text());
+    // console.log(li.closest('ul').find('.audi').text());
+    // console.log(li.prev().text());
+
+    const ul = $("ul.car");
+    const li = $("ul li")
+    ul.css('list-style', 'none');
+    li.each((i, li) => {
+        // jQuery 객체를 가져오면 JS객체이다.
+        if($(li).text() === '벤츠'){
+            // 벤츠 대신 벤틀리로 변경
+             $(li).text('벤틀리');
+         }
+     });
+
+     // 아우디를 빨간색으로 변경
+    li.eq(1).css('color', 'red');
+    // BMW를 파란색으로 변경
+    $(li[2]).css('color', 'blue');
+
+    
+</script>
+</html>

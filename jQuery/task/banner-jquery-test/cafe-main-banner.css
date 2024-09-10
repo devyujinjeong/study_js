@@ -1,0 +1,93 @@
+@charset "UTF-8";
+.padding{
+    height: 50px;
+}
+
+.cafe-list{
+    padding-top: 25px;
+    background: #fff;
+}
+
+.cafe-banner{
+    height: 304.77px;
+    width: 1520px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slick-slider{
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.cafe-banner.slick-slider{
+    margin-top: 0;
+}
+
+div.image {
+    float: left;
+    width: 1060px;
+    height: 299.98px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.image>img{
+    width: 1060px;
+    height: 299.98px;
+}
+
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* 화살표 관련 css */
+.banner-arrow{
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 120px;
+    width: 30px;
+    height: 60px;
+    opacity: .5;
+    border-radius: 15px;
+    background-color: #fff;
+    font-size: 16px;
+    z-index: 10;
+}
+
+.banner-prevArrow{
+    left: calc((100% - 1210px)/2);
+}
+
+.banner-nextArrow{
+    right: calc((100% - 1200px)/2);
+}
+
+.arrow-SvgIcon{
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+}
+
+.SvgIcon{
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    fill: currentColor;
+    flex-shrink: 0;
+    font-size: inherit;
+}
